@@ -66,7 +66,7 @@ class StockValuation(BaseModel):
     ps_ttm: Optional[float] = None
     dividend_yield_ttm: Optional[float] = None
 
-@router.get("/{stock_code}", response_model=StockInfo)
+@router.get("/{stock_code}/basic", response_model=StockInfo)
 async def get_stock_info(stock_code: str):
     """
     获取股票基本信息
